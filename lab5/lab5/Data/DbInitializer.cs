@@ -52,7 +52,7 @@ namespace lab5.Data
             Random randObj = new Random(1);
 
             //Заполнение таблицы емкостей
-            for (int CarID = 11; CarID <= carsNumber; CarID++)
+            for (int CarID = 13; CarID <= carsNumber; CarID++)
             {
                 carRegistrationNumber = MyRandom.RandomString(9);
                 carNumberOfBody = MyRandom.RandomString(15);
@@ -388,6 +388,38 @@ namespace lab5.Data
                 CarDescription = "Кроссовер",
             });
 
+
+            db.Cars.Add(new Car
+            {
+                BrandID = 6,
+                OwnerID = 9,
+                CarRegistrationNumber = "1178 GH-3",
+                CarPhoto = 12,
+                CarNumberOfBody = "DFGHB552218GBSR",
+                CarNumberOfMotor = "F4B - 1.4л/55кВт",
+                CarNumberOfPassport = "EGFV4151V",
+                CarReleaseDate = new DateTime(2005, 12, 08),
+                CarRegistrationDate = new DateTime(2008, 06, 09),
+                CarLastCheckupDate = new DateTime(2015, 09, 08),
+                CarColor = "Голубой",
+                CarDescription = "Спортивный седан",
+            });
+
+            db.Cars.Add(new Car
+            {
+                BrandID = 10,
+                OwnerID = 8,
+                CarRegistrationNumber = "5211 PL-4",
+                CarPhoto = 13,
+                CarNumberOfBody = "SDGS21547FD5H41",
+                CarNumberOfMotor = "g94 - 1.2л/35кВт",
+                CarNumberOfPassport = "DHED56125",
+                CarReleaseDate = new DateTime(2009, 01, 01),
+                CarRegistrationDate = new DateTime(2010, 08, 21),
+                CarLastCheckupDate = new DateTime(2011, 10, 11),
+                CarColor = "Красный",
+                CarDescription = "Седан",
+            });
 
             db.SaveChanges();
         }
