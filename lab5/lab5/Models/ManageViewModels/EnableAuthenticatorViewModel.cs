@@ -10,7 +10,7 @@ namespace lab5.Models.ManageViewModels
     public class EnableAuthenticatorViewModel
     {
             [Required]
-            [StringLength(7, ErrorMessage = "{0} Должен быть не менее {2} и не более {1} символов в длину.", MinimumLength = 6)]
+            [StringLength(7, ErrorMessage = "{0} должен быть не менее {2} и не более {1} символов в длину.", MinimumLength = 6)]
             [DataType(DataType.Text)]
             [Display(Name = "Код подтверждения")]
             public string Code { get; set; }

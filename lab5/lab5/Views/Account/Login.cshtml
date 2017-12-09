@@ -15,7 +15,7 @@
     <div class="col-md-4">
         <section>
             <form asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
-                <h4>Испольуйте ваш аккаунт для входа.</h4>
+                <h4>Используйте ваш аккаунт для входа.</h4>
                 <hr />
                 <div asp-validation-summary="All" class="text-danger"></div>
                 <div class="form-group">
@@ -44,7 +44,7 @@
                         <a asp-action="ForgotPassword">Забыли пароль?</a>
                     </p>
                     <p>
-                        <a asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]">Регистрация нового пользователя</a>
+                        <a asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]">Регистрация</a>
                     </p>
                 </div>
             </form>

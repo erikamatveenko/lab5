@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -8,7 +8,7 @@ namespace lab5.Models.AccountViewModels
 {
     public class ExternalLoginViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Введите email.")]
         [EmailAddress]
         public string Email { get; set; }
     }

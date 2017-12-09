@@ -26,8 +26,8 @@ namespace lab5.Controllers
             int pageSize = 10;   // количество элементов на странице
             int currBrandID = currentParameterID ?? 0;
 
-            List<BrandNameFilter> brandNames = _db.Brands.Select(b => new BrandNameFilter { BrandName = b.BrandName, Id = b.BrandID }).ToList();
-            brandNames.Insert(0, new BrandNameFilter { BrandName = "Все", Id = 0 });
+            List<CarBrandNameFilter> brandNames = _db.Brands.Select(b => new CarBrandNameFilter { BrandName = b.BrandName, Id = b.BrandID }).ToList();
+            brandNames.Insert(0, new CarBrandNameFilter { BrandName = "Все", Id = 0 });
       
             List<Car> cars = _db.Cars
                 .Select(t => new Car
@@ -49,7 +49,7 @@ namespace lab5.Controllers
                     Owner = t.Owner
                 }).OrderBy(s => s.CarID)
                 .ToList();
-            BrandNameFilter brnf  = brandNames.Where(c => c.Id == currBrandID).ToList()[0];
+            CarBrandNameFilter brnf  = brandNames.Where(c => c.Id == currBrandID).ToList()[0];
             if (currBrandID > 0)
             {
                 cars = cars.Where(c => c.Brand.BrandID == currBrandID).ToList();             

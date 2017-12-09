@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace lab5.Models
 {
-    public class BrandNameFilter
+    public class CarBrandNameFilter
     {
         public int Id { get; set; }
         public string BrandName { get; set; }

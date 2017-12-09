@@ -8,7 +8,7 @@ namespace lab5.Models.AccountViewModels
 {
     public class ForgotPasswordViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Введите email.")]
         [EmailAddress]
         public string Email { get; set; }
     }

@@ -113,7 +113,6 @@ namespace lab5.Controllers
                 if (BrandExists(brand.BrandID))
                 {
                     return View("Message", "Уже существует марка автомобиля с данным идентификатором!");
-
                 }
                 _db.Add(brand);
                 _db.SaveChanges();

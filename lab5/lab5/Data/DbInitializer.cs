@@ -13,9 +13,9 @@ namespace lab5.Data
         {
             db.Database.EnsureCreated();
 
-            int brandsNumber = 40;
-            int ownersNumber = 40;
-            int carsNumber = 100;
+            int brandsNumber = 10000;
+            int ownersNumber = 10000;
+            int carsNumber = 200;
 
             InitializeOwners(db, ownersNumber);
             InitializeBrands(db, brandsNumber);
@@ -27,10 +27,10 @@ namespace lab5.Data
         {
             db.Database.EnsureCreated();
 
-            // Проверка занесены ли Cars
+            //Проверка, занесены ли Cars
             if (db.Cars.Any())
             {
-                return;   // База данных инициализирована
+                return;   //База данных инициализирована
             }
 
             InitialStartPageCars(db);

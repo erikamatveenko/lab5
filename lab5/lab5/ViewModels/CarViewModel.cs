@@ -14,8 +14,8 @@ namespace lab5.Models
         //Свойство для навигации по страницам
         public PageViewModel PageViewModel { get; set; }
         
-        public IEnumerable<BrandNameFilter> BrandNames { get; set; }
+        public IEnumerable<CarBrandNameFilter> BrandNames { get; set; }
 
-        public BrandNameFilter CurrentBrandName { get; set; }
+        public CarBrandNameFilter CurrentBrandName { get; set; }
     }
 }

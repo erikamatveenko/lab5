@@ -8,12 +8,12 @@ namespace lab5.Models.AccountViewModels
 {
     public class ResetPasswordViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Введите email.")]
         [EmailAddress]
         public string Email { get; set; }
 
-        [Required]
-        [StringLength(100, ErrorMessage = "{0} Должен быть не менее {2} и не более {1} символов в длину.", MinimumLength = 6)]
+        [Required(ErrorMessage = "Введите пароль.")]
+        [StringLength(100, ErrorMessage = "{0} должен быть не менее {2} и не более {1} символов в длину.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         public string Password { get; set; }
 

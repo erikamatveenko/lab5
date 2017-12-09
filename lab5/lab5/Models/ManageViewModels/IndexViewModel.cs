@@ -8,11 +8,12 @@ namespace lab5.Models.ManageViewModels
 {
     public class IndexViewModel
     {
+        [Display(Name = "Имя пользователя")]
         public string Username { get; set; }
 
         public bool IsEmailConfirmed { get; set; }
-
-        [Required]
+        
+        [Required(ErrorMessage = "Введите email.")]
         [EmailAddress]
         public string Email { get; set; }
 

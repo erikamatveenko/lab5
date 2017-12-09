@@ -12,7 +12,7 @@ namespace lab5.Services
         public static Task SendEmailConfirmationAsync(this IEmailSender emailSender, string email, string link)
         {
             return emailSender.SendEmailAsync(email, "Подтвердите ваш email",
-                $"Пожалуйста, подтвердите ваш аккаунт нажатием на эту ссылку: <a href='{HtmlEncoder.Default.Encode(link)}'>link</a>");
+                $"Пожалуйста, для подтверждения вашего аккаунта нажмите на эту ссылку: <a href='{HtmlEncoder.Default.Encode(link)}'>link</a>");
         }
     }
 }
